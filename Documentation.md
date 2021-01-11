@@ -17,7 +17,8 @@ In our project will be detecting if a person has consumend alcohol or not.If the
 		  
   • Led:It is used as a indication if it senses the alcohol it will glow otherwise it will not glow with 220 Ω resistor so that led will not get burst.
   
-### Circuit Diagram:
+### Circuit Diagram:![Alcohol Detector_page-0001](https://user-images.githubusercontent.com/73650233/104219638-630a1500-5464-11eb-9dd6-bd18b79ff30b.jpg)
+
 
 ### Working: 
 We are using digital pin of the sesnor by setting the threshold voltage of the sensor be setting the potentiometer.
