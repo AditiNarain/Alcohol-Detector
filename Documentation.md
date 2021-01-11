@@ -17,19 +17,22 @@ In our project will be detecting if a person has consumend alcohol or not.If the
 		  
   • Led:It is used as a indication if it senses the alcohol it will glow otherwise it will not glow with 220 Ω resistor so that led will not get burst.
   
-### Circuit Diagram:
-
+### Circuit Diagram:![Alcohol Detector_page-0001](https://user-images.githubusercontent.com/73650233/104219638-630a1500-5464-11eb-9dd6-bd18b79ff30b.jpg)
 
 
 ### Working: 
-We are using digital pin of the sesnor by setting the threshold voltage of the sensor.
-If the voltage from sensor is less than the threshold voltage it will give ‘0’ as output which indicates no alcohol is present.
+We are using digital pin of the sesnor by setting the threshold voltage of the sensor be setting the potentiometer.
+If the voltage from sensor is less than the threshold voltage it will give ‘0’ as output which indicates no alcohol is present.   
+
+![No Alcohol](https://user-images.githubusercontent.com/73650233/104218207-68fef680-5462-11eb-8c66-08d511ebbf78.png) 
+
 When value go above the threshold voltage it will send ‘1’ as output which is the indication of alcohol near the sensor. 
 As the alcohol got detected then the arduino will send the message to data pins of lcd “Alcohol got detected” to lcd and led will start to glow.
-Hence we can easily identify if a person has consumed alcohol or not.
+Hence we can easily identify if a person has consumed alcohol or not.                            
 
+![Alcohol Detected](https://user-images.githubusercontent.com/73650233/104217953-0efe3100-5462-11eb-804e-3f4ad5ecffe1.png)
 ### Program Logic:
-  •If we use digital pin of sensor:
+  #### •If we use digital pin of sensor:
    If at the input Pin 7 of arduino “0” is detected the no alcohol if “1” is detected then prints Alcohol is present. 
 
         #define MQ3 7  //senor is attached
@@ -40,7 +43,7 @@ Hence we can easily identify if a person has consumed alcohol or not.
        if  gas_value == “1”
 	  Alcohol Detected
 
-  •If we use analog pin of sensor :
+  #### •If we use analog pin of sensor :
      AnalogRead will read the value of sesnor and if the input value is in range then no alcohol is present and if  the range goes above Alcohol is present.
      
      #define MQ3 Ao  //senor is attached
