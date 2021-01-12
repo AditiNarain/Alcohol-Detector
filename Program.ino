@@ -1,5 +1,5 @@
 #include <LiquidCrystal.h>
-#define gas_Pin 7
+#define MQ3 7 //defined macros for input pin
 // initialize the library by associating any needed LCD interface pin
 // with the arduino pin number it is connected to
 const int rs = 13, en = 12, d4 = 11, d5 = 10, d6 = 9, d7 = 8;
@@ -8,11 +8,11 @@ int gas_value;
 void setup() {
   // set up the LCD's number of columns and rows:
   lcd.begin(16, 2);  
-  pinMode(6,OUTPUT);
+  pinMode(6,OUTPUT);// led is connected to D6
 }
 void loop()
 {
-  gas_value = digitalRead(gas_Pin); 
+  gas_value = digitalRead(MQ3); // Read the value from MQ3 Sensor
   if(gas_value==1)
   {
    digitalWrite(6,HIGH);
