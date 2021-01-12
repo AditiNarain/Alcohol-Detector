@@ -36,22 +36,22 @@ Hence we can easily identify if a person has consumed alcohol or not.
    If at the input Pin 7 of arduino “0” is detected the no alcohol if “1” is detected then prints Alcohol is present. 
 
         #define MQ3 7  //senor is attached
-       int gas_value;
-       gas_value = digitalRead(MQ3);
-       if gas_value == “0”
+        int gas_value;
+        gas_value = digitalRead(MQ3);
+        if gas_value == “0”
 	  No Alcohol
-       if  gas_value == “1”
+        if  gas_value == “1”
 	  Alcohol Detected
 
   #### •If we use analog pin of sensor :
-     AnalogRead will read the value of sesnor and if the input value is in range then no alcohol is present and if  the range goes above Alcohol is present.
+  AnalogRead will read the value of sesnor and if the input value is in range then no alcohol is present and if  the range goes above Alcohol is present.
      
      #define MQ3 Ao  //senor is attached
-      int gas_value;
-      gas_value = analog(MQ3);
-      if gas_value <400
-	 Normal Mode
-      else
+     int gas_value;
+     gas_value = analog(MQ3);
+     if gas_value <400
+	Normal Mode
+     else
         Alcohol Detected
 
 
