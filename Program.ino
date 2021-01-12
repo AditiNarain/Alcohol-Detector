@@ -13,16 +13,16 @@ void setup() {
 void loop()
 {
   gas_value = digitalRead(MQ3); // Read the value from MQ3 Sensor
-  if(gas_value==1)
+  if(gas_value==1) // if the value is above threshold then mq3 gives 1 as output
   {
-   digitalWrite(6,HIGH);
+   digitalWrite(6,HIGH);// Led will glow
    lcd.setCursor (0, 1);
    lcd.print("ALCOHOL DEDUCTED");
    lcd.display();
    }
-   else
+   else // if the value is below threshold then mq3 gives 0 as output
    {
-    digitalWrite(6,LOW);
+    digitalWrite(6,LOW);// led we be off
     lcd.setCursor (0, 1);
     lcd.print("NO ALCOHOL");
     lcd.display();
